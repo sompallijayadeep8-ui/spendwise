@@ -14,10 +14,10 @@ app.use(cors({
     "http://localhost:5178",
     "https://spendwise-olive-rho.vercel.app"
   ],
-  credentials: true
-}
+  credentials: true,
 
-));
+
+}));
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoutes"));
