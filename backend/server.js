@@ -8,7 +8,16 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5178",
+    "https://spendwise-olive-rho.vercel.app"
+  ],
+  credentials: true
+}
+
+));
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoutes"));
