@@ -63,6 +63,7 @@ https://spendwise-pur6.onrender.com
 - Render
 
 ---
+
 ## 📁 Folder Structure
 
 frontend/
