@@ -63,45 +63,6 @@ https://spendwise-pur6.onrender.com
 - Render
 
 ---
-
-## 📸 Screenshots
-
-### Register
-
-![Register](screenshots/register.png)
-
----
-
-### Login
-
-![Login](screenshots/login.png)
-
----
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-### Budget Tracking
-
-![Budget](screenshots/budget.png)
-
----
-
-### Expense Analytics
-
-![Pie Chart](screenshots/pie-chart.png)
-
----
-
-### Transactions
-
-![Transactions](screenshots/transaction-list.png)
-
----
-
 ## 📁 Folder Structure
 
 frontend/
