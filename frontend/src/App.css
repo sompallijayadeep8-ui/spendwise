@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+a {
+  color: #93c5fd;
+  margin-right: 12px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+
+
+.summary-card {
+  flex: 1;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.income {
+  color: #22c55e;
+}
+
+.expense {
+  color: #ef4444;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 6px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.delete {
+  background: #dc2626;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 30px;
+  background: #1e293b;
+
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.error-message {
+  color: #f87171;
+  margin: 8px 6px;
+  font-size: 14px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.category-item {
+  background: #1e3a5f;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.category-item h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.category-item p {
+  color: #38bdf8;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.positive-balance {
+  color: #22c55e; /* Green */
+}
+
+.negative-balance {
+  color: #ef4444; /* Red */
+}
+.income-card {
+  border-left: 5px solid #22c55e;
+}
+
+.expense-card {
+  border-left: 5px solid #ef4444;
+}
+
+.balance-card {
+  border-left: 5px solid #38bdf8;
+}
+.chart-card {
+  position: relative;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.chart-center {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.chart-center h3 {
+  margin: 5px 0 0;
+  color: #ef4444;
+  font-size: 1.4rem;
+}
+.transaction-card {
+  transition: 0.25s ease;
+}
+
+.transaction-card:hover {
+  transform: translateY(-4px);
+}
+
+.income-border {
+  border-left: 5px solid #22c55e;
+}
+
+.expense-border {
+  border-left: 5px solid #ef4444;
+}
+
+.transaction-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.transaction-card p {
+  margin: 8px 0;
+  color: #cbd5e1;
+}
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.filter-controls input,
+.filter-controls select,
+.filter-controls button {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-controls button {
+  max-width: 180px;
+}
+.transaction-card {
+  padding: 25px;
+  border-radius: 16px;
+  transition: .3s;
+}
+
+.transaction-card:hover {
+  transform: translateY(-4px);
+}
+
+.transaction-card button {
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+@media(max-width:768px){
+
+  .navbar{
+      flex-direction:column;
+      gap:15px;
+  }
+  
+  .nav-links{
+      width:100%;
+      justify-content:center;
+  }
+  }
+  .transaction-card{
+    padding:25px;
+    margin-bottom:20px;
+}
+.container{
+  max-width: 1200px;
+  padding:25px;
+  margin: auto
+}
+
+.budget-card {
+  padding: 20px;
+}
+
+.budget-input {
+  width: 300px;
+  max-width: 100%;
+  margin: 15px 0;
+}
+
+.budget-details {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.budget-details p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.progress {
+  width: 100%;
+  height: 14px;
+  background: #2d3748;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #22c55e, #06b6d4);
+  transition: width 0.4s ease;
+}

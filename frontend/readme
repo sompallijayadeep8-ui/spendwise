@@ -1,0 +1,9 @@
+SpendWise is a full-stack personal finance tracker where users can register, 
+log in, and manage their income and expenses. 
+The frontend is built with React and communicates with a Node.js/Express backend using Axios. 
+Authentication is handled using JWT, 
+and passwords are securely hashed using bcrypt before being stored in MongoDB.
+ Each transaction is linked to the logged-in user, 
+so users can only access their own financial data. 
+The app supports adding, editing, deleting, filtering transactions, 
+and calculating income, expenses, and balance.

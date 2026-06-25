@@ -1,0 +1,123 @@
+Register
+   ↓
+Hash Password
+   ↓
+Store User
+   ↓
+Login
+   ↓
+Compare Password
+   ↓
+Generate JWT
+   ↓
+Send Token
+   ↓
+Protected Route
+   ↓
+Verify JWT
+   ↓
+Extract User ID
+
+How does your backend know which user is making the request?
+
+During login I generate a JWT containing the user's id. The frontend sends that token in the Authorization header. My auth middleware verifies the token and extracts the userId, then attaches it to req.userId. Every protected route uses that value.
+
+How do you ensure users only modify their own transactions?
+
+Transaction.findOneAndUpdate(
+  {
+    _id: req.params.id,
+    user: req.userId
+  },
+  req.body,
+  { new: true }
+);
+User A's token
+      ↓
+req.userId
+      ↓
+Only documents owned by that user can be updated'
+
+cd ~/spendwise/backend
+node server.js
+
+cd ~/spendwise/frontend
+npm run dev
+
+
+Database Design
+User Collection
+{
+  _id,
+  name,
+  email,
+  password,
+  createdAt
+}
+Transaction Collection
+{
+  _id,
+  user,
+  title,
+  amount,
+  type,
+  category,
+  date,
+  createdAt
+}
+Relationship
+
+One user can have many transactions.
+
+User 1 ──────── Many Transactions
+
+Transaction stores user id:
+
+user: req.user.id
+
+This is the most important part.
+If you forget this, your app is broken from a security point of view.
+
+Mongoose Queries
+
+Find user:
+
+User.findOne({ email });
+
+Create user:
+
+User.create({ name, email, password: hashedPassword });
+
+Get user transactions:
+
+Transaction.find({ user: req.user.id });
+
+Update transaction:
+
+Transaction.findOneAndUpdate(
+  { _id: req.params.id, user: req.user.id },
+  req.body,
+  { new: true }
+);
+
+Delete transaction:
+
+Transaction.findOneAndDelete({
+  _id: req.params.id,
+  user: req.user.id
+});
+
+Notice this:
+
+user: req.user.id
+
+That prevents users from editing/deleting others’ transactions.
+
+
+
+
+
+
+
+
+

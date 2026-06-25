@@ -1,0 +1,10 @@
+Routes
+
+Routes define API URLs.
+
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.get("/", protect, getTransactions);
+router.post("/", protect, addTransaction);
+router.put("/:id", protect, updateTransaction);
+router.delete("/:id", protect, deleteTransaction);

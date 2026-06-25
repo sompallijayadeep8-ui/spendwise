@@ -1,0 +1,14 @@
+Controllers
+
+Controllers contain actual logic.
+
+Example:
+
+const addTransaction = async (req, res) => {
+  const transaction = await Transaction.create({
+    ...req.body,
+    user: req.user.id
+  });
+
+  res.status(201).json(transaction);
+};

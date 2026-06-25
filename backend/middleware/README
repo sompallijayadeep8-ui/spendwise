@@ -1,0 +1,9 @@
+Middleware
+
+Middleware runs before controller.
+
+Auth middleware:
+
+Request → Middleware → Controller → Response
+
+It checks JWT before allowing access.

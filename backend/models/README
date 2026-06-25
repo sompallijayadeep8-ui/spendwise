@@ -1,0 +1,17 @@
+Models
+
+Models define database structure.
+
+const UserSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  password: String
+});
+const TransactionSchema = new mongoose.Schema({
+  user: ObjectId,
+  title: String,
+  amount: Number,
+  type: String,
+  category: String,
+  date: Date
+});

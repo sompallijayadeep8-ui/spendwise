@@ -1,0 +1,49 @@
+show dbs
+
+use spendwise
+
+show collections
+
+db.users.find().pretty()
+
+db.transactions.find().pretty()
+
+db.transactions.countDocuments()
+
+db.transactions.find({ type: "expense" })
+
+db.transactions.find({ category: "Food" })
+
+1. React form submits
+2. Axios sends POST request
+3. JWT goes in Authorization header
+4. Middleware verifies token
+5. req.userId is attached
+6. Controller creates transaction
+7. MongoDB stores document
+8. JSON response returned
+9. React refreshes transactions
+10. Dashboard re-renders
+
+
+React Form
+    ↓
+Axios
+    ↓
+Express Route
+    ↓
+Controller
+    ↓
+MongoDB
+
+
+
+MongoDB
+    ↓
+Controller
+    ↓
+JSON Response
+    ↓
+React State
+    ↓
+UI
